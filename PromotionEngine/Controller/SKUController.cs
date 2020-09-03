@@ -8,7 +8,7 @@ namespace PromotionEngine.Controller
     public class SKUController
     {
         [HttpGet("GetSkuPricesWithPromotions")]
-        public int GetSkuPricesWithPromotions(Dictionary<string, int> skus)
+        public double GetSkuPricesWithPromotions(Dictionary<string, int> skus)
         {
             return new PromotionCalculater().GetPromotionalPrice(skus);
         }
