@@ -128,14 +128,9 @@ namespace PromotionEngine.Engine
                 isPromotionApplied = true;
             }
 
-            if (countSku1 > 0)
-            {
-                promotionalPrice = (fixedPriceForSku1 * countSku1);
-            }
-            if (countSku2 > 0)
-            {
-                promotionalPrice = (fixedPriceForSku2 * countSku2);
-            }
+            promotionalPrice += countSku1 > 0 ? (fixedPriceForSku1 * countSku1) : 0;
+
+            promotionalPrice += countSku2 > 0 ? (fixedPriceForSku2 * countSku2) : 0;
 
             return promotionalPrice;
         }
